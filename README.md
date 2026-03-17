@@ -7,7 +7,7 @@ by learning embeddings from graph-derived features to improve clone search robus
 **Thesis**: "Incorporating Machine Learning into Spectral Analysis for Program Clone Detection" (LMU)
 
 ## Dataset
-The experiments use a BinKit-derived binary corpus. BinKit is a public benchmark for binary code similarity analysis. citeturn0search0
+The experiments use a BinKit-derived binary corpus. BinKit is a public benchmark for binary code similarity analysis.
 In the thesis, we focus on a 67,680‑binary subset dominated by Coreutils builds, compiled across optimization levels,
 compilers, and architectures.
 
