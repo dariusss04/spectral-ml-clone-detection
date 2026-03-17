@@ -8,8 +8,8 @@ from collections import defaultdict
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = Path(os.getenv("PCD_DATA_DIR", REPO_ROOT / "data"))
-SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "samples.txt"))
-EXTRACTED_DIR = Path(os.getenv("PCD_EXTRACTED_DIR", DATA_DIR / "extractedEigenvalues"))
+SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "meta" / "programs_metadata.txt"))
+EXTRACTED_DIR = Path(os.getenv("PCD_EXTRACTED_DIR", DATA_DIR / "features"))
 SPLITS_DIR = Path(os.getenv("PCD_SPLITS_DIR", DATA_DIR / "splits"))
 
 def parse_samples(samples_file_path):
@@ -109,7 +109,7 @@ def split(samples_file_path, data_path, output_path, train_ratio=0.8, val_ratio=
     overlap = check_overlap(train_programs, val_programs, test_programs)
     
     total_programs = len(train_programs) + len(val_programs) + len(test_programs)
-    split_stats_file = os.path.join(output_path, 'splitStats.txt')
+    split_stats_file = os.path.join(output_path, 'split_stats.txt')
     
     clones_train = count_clones(train_groups)
     clones_val = count_clones(val_groups)

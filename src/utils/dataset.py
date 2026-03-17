@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = Path(os.getenv("PCD_DATA_DIR", REPO_ROOT / "data"))
-SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "samples.txt"))
+SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "meta" / "programs_metadata.txt"))
 CACHE_DIR = Path(os.getenv("PCD_CACHE_DIR", DATA_DIR / "datasetCache"))
 
 CACHE_DIR.mkdir(parents=True, exist_ok=True)

@@ -15,22 +15,15 @@ from models.siamese_mlp_relu_base import BaseSiameseNetwork
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = Path(os.getenv("PCD_DATA_DIR", REPO_ROOT / "data"))
 RESULTS_DIR = Path(os.getenv("PCD_RESULTS_DIR", REPO_ROOT / "results"))
-SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "samples.txt"))
+SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "meta" / "programs_metadata.txt"))
 TEST_SPLIT_DIR = Path(os.getenv("PCD_TEST_SPLIT_DIR", DATA_DIR / "splits" / "test"))
 PARAMS_PATH = Path(os.getenv(
     "PCD_PARAMS_PATH",
-    REPO_ROOT / "experiments" / "basicMultiLayersArchitectures" / "architecture12L" / "parameters12L.pth"
+    REPO_ROOT / "experiments" / "mlp_depth_sweep" / "depth_12l" / "weights.pth"
 ))
 
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-
-def parse_samples(samples_file_path):
-    """
-    Parse samples.txt into an index -> metadata mapping.
-    """
-    with open(samples_file_path, 'r') as f:
-        lines = f.readlines()
 
     sample_dict = {}
     for i in range(0, len(lines), 2):

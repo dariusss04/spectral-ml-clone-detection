@@ -8,9 +8,9 @@ import torch
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = Path(os.getenv("PCD_DATA_DIR", REPO_ROOT / "data"))
-SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "samples.txt"))
+SAMPLES_FILE = Path(os.getenv("PCD_SAMPLES_FILE", DATA_DIR / "meta" / "programs_metadata.txt"))
 TEST_SPLIT_DIR = Path(os.getenv("PCD_TEST_SPLIT_DIR", DATA_DIR / "splits" / "test"))
-DICT_DIR = Path(os.getenv("PCD_DICT_DIR", DATA_DIR / "dictionaries"))
+DICT_DIR = Path(os.getenv("PCD_DICT_DIR", DATA_DIR / "meta" / "clone_dicts"))
 
 DICT_DIR.mkdir(parents=True, exist_ok=True)
 
