@@ -1,0 +1,9 @@
+Metric,Value
+Lowest_Train_Loss,0.0416270454031849
+Lowest_Validation_Loss,0.0509823496247628
+Epoch_Lowest_Train_Loss,185
+Epoch_Lowest_Validation_Loss,162
+Train_Loss_First_Epoch,0.127054898270866
+Train_Loss_Last_Epoch,0.0438633423252103
+Validation_Loss_First_Epoch,0.115752141436805
+Validation_Loss_Last_Epoch,0.0597359486304422

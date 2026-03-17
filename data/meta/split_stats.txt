@@ -1,0 +1,12 @@
+Total number of programs: 67680
+Train size: 54144
+Validation size: 6624
+Test size: 6912
+Number of clone groups in Train: 188
+Number of clone groups in Validation: 23
+Number of clone groups in Test: 24
+Overlap between splits: set()
+No overlap found between splits.
+Total clone programs in Train: 54144
+Total clone programs in Validation: 6624
+Total clone programs in Test: 6912
